@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Harleen Kaur | Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale=1>
+        <meta description="Hi there, I'm Harleen Kaur. I'm a dedicated website developer and web designer. Best thing about my work? I make sure that I deliver my services to the best potential and meet the requirements. You can check out my latest projects and designs. ">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+        @font-face{
+            font-family:"Rosario";
+            src:url("Fonts/Rosario/static/Rosario-Light.ttf");
+        }
+        @font-face{
+            font-family:"Roboto";
+            src:url("Fonts/Roboto/Roboto-Light.ttf");
+        }
+        @font-face{
+            font-family:"Quattrocento";
+            src:url("Fonts/Quattrocento/Quattrocento-Regular.ttf");
+        }
+        @font-face{
+            font-family:"Quando";
+            src:url("Fonts/Quando/Quando-Regular.ttf");
+        }
+
+            /*STYLING TAGS*/
+            body{
+                background-image:url("images/bg.webp");
+                margin:50px 0px 0px 0px;
+            }
+            div.gototop{
+                position:fixed; 
+                bottom:25px;
+                right:25px; 
+                background-color: #535353; 
+                border-radius:50%; 
+                box-shadow:4px 4px 25px 0 #000000; 
+                z-index:2;
+                display:none;
+            }
+            div.gototop>a>i{
+                color:white; 
+                font-size:30px;
+                padding:3px 10px 7px 10px;
+            }
+            div.gototop:hover{
+                background-color:#bbbbbb;
+            }
+            div.gototop:hover > a > i{
+                color:black;
+            }
+            nav{
+                width:100%;
+                text-align:center;
+                margin:0px 0 130px 0;
+                padding:25px 0px 0 0;
+            }
+            h3{
+                background-image: linear-gradient(#FFC9CC, #ec4da2);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-family:Quando;
+                font-size:36px;
+                text-align:center;
+            }
+            .content{
+              margin:0px 100px;
+              display:block;
+            }
+
+            nav>a{
+                margin:24px 0 0 24px;
+            }
+            /*STYLING CLASSES*/
+            .navi{
+                text-decoration:none;
+                font-family:"Quattrocento";
+                font-size:1.8vw;
+                color:white;
+                margin-right:100px;
+                transition:1s;
+                padding:10px 20px;
+            }
+            /*SIDEBAR*/
+            #navbar{
+                width:0%;
+                box-shadow:8px 0px 25px 0px black;
+                background-color:#272727;
+                height:100%;
+                position:fixed;
+                top:0;
+                left:0;
+                transition:0.2s;
+                z-index:1;
+                visibility:hidden;
+            }
+            #navbar>div.icondiv>i{
+                font-size:36px;
+                color:#cacaca; 
+                margin:15px 10px 0 0;
+                -webkit-text-stroke-width:6px;
+                -webkit-text-stroke-color: #272727;
+            }
+            #navbar>div.icondiv>i:hover{
+                color:white;
+                cursor:pointer;
+            }
+            #navbar>a{
+                text-align:center;
+                max-width:60%;
+                margin-left:20%;
+                margin-top:10%;
+                text-decoration:none;
+                font-family:"Quattrocento";
+                font-size:3vw;
+                color:white;
+                padding: 1vw 2vw;
+                display:none;
+            }
+           #navbar>a:hover, a:active{
+               background-color: #4b4b4bb6;
+               border-radius:40px;
+               color:#a1ecff;
+               box-shadow:0 8px 15px 0 solid #000000;
+           }
+           #navbar > a#aboutnav{
+               margin-top:100px;
+           } 
+           div.aboutsect{
+               padding:0 0 90px 0;
+           }
+           .textcont{
+            padding:0 25px 0 100px; 
+            text-align:center;
+           }
+           .textcont>h2{
+            font-family:Raleway; 
+            font-size:3vw; 
+            color:#ffb7db;;
+           }
+           .textcont>h6{
+            font-family:Raleway; 
+            font-size:1.5vw; 
+            color:#72DDFF;
+            }
+           .textcont>p{
+            color:white;
+            text-align:justify;
+            padding:10px 5px; 
+            font-size:17px; 
+            font-family:Roboto;
+           }
+           .textcont>p.aboutdetails{
+               font-family: Raleway;
+               line-height:2em ;
+               color:#c9c9c9;
+               font-size:16px;
+           }
+           .textcont>p.aboutdetails>a:hover,a:active{
+                color:#72DDFF;
+           }
+           .textcont>p.aboutdetails>span>i{
+               text-align:left;
+               width:40px;
+               font-size:20px;
+           }
+           .picsect>#pictabmob{
+            box-shadow: 4px  8px 20px 0px #00000075;
+            border-radius:50%;
+            width:400px; 
+            height:400px; 
+            max-width:100%;
+            height:auto;
+           }
+           .projectsect{
+            text-align:center; 
+            margin:0px -100px; 
+            padding:90px 0; 
+            background-color: #c4c4c415;
+           }
+           .projects{
+            margin:50px 100px 0px 100px;
+           }
+            .projects>#projimg{
+                padding: 0 15px;     /*left and right padding to images*/
+           }
+           #projimg>img{
+            box-shadow: 4px 4px 10px 0px #00000075;
+            margin:5px 0;   /*top margins to 1st and 3rd images*/
+           }
+           #projimg>a{
+               font-family:Rosario;
+               font-size:1.5vw;
+               color:white;
+               text-decoration:none;
+           }
+           #projimg>a:hover{
+               color:#72DDFF;
+           }           
+           .skillsect{
+            margin:0px -100px 100px -100px;
+            padding:90px 0 ;
+           }
+           .skillrow{
+            text-align:center; 
+            margin:50px 100px 0 100px;
+           }
+           div.skillmescont{
+            position: relative; margin: 0 15%; border-radius: 25px; background-color:#363636;
+            box-shadow:8px 2px 20px 0 #030303;
+           }
+           div.skillmescont > img{
+            position:absolute; left:-10px; top:-15px; width:70px; height:70px;
+            border-radius:50%;  box-shadow: 6px 4px 30px 0 #000000;
+           }
+           div.skillmescont > div.widthfill{
+            background-color:#ecececcb; height:40px; border-radius: 25px; padding:3% 0 0 18%;
+
+           }
+           div.skillcol1r2 > .skillmescont > div.widthfill , div.skillcol2r2 > .skillmescont > div.widthfill{
+            background-color:#ecececcb; height:40px; border-radius: 25px; padding:2% 0 0 18%;
+           }
+           .contactbg{
+               background-color:#c4c4c415;
+               border-radius:8000% 8000% 0 0 ;
+               position:relative;
+               left:-11vw;
+               height:400px;
+               min-height:250px;
+               width:122%;
+               min-width:100%;
+               box-shadow: 0 8px 2px 0 #00000075;
+           }
+           p#contacttext{
+               max-width:600px; 
+               width:60%; 
+               padding:0 50px; 
+               min-width:300px;
+               text-align:center;
+               font-family:Raleway; 
+               font-size:17px; 
+               color:#f5f5f5;
+           }
+           .coctinfobox>span{
+               color:white;
+               font-size:18px;
+               padding-left:10px;
+               font-family:Raleway;
+          }
+           .socialrow{
+               width:20%;
+               margin:30px 40%;
+           }
+           .socialcol1{
+               padding-right:8px;
+           }
+           .socialcol2{
+               padding-left:8px;
+           }
+           .socialcol2 > a > i, .socialcol1 > a > i{
+            font-size:22px;
+            color:white; 
+            background-color:#000000; 
+            padding: 14px 15px; 
+            border-radius:50%;
+            box-shadow:4px 8px 25px 0 #000000;
+           }
+           .mail:hover{
+               background-color: #e60f0f;
+               cursor: pointer;
+           }
+           .linkin:hover{
+               background-color:#1596ff;
+               cursor:pointer;
+           }
+           .mail, .linkin{
+               position:relative;
+           }
+           .mail:hover .tooltip1{
+               opacity:1;
+               visibility: visible;
+           }
+           .tooltip1, .tooltip2{
+               position:absolute;
+               top:120%;
+               left:-100%;
+               padding:10px 15px;
+               background-color: #dddddd;
+               border-radius:4px;
+               width:250px;
+               text-align:left;
+               font-size:16px;
+               font-family:Raleway;
+               color:#292929;
+               font-weight:600;
+             
+               box-shadow:4px 8px 25px 0 #000000;
+               z-index:1;
+               visibility: hidden;
+
+               opacity: 0;
+               transition: opacity 1s;
+           }
+           /*MEDIA QUERIES*/
+           @media screen and (max-width: 992px){
+                #projimg>a{
+                    font-family:Rosario;
+                    font-size:20px;
+                    color:white;
+                    text-decoration:none;
+                    
+                }
+                #projimg{
+                    margin:25px 0;
+                }
+                body{
+                    margin:0px;
+                    background-size:100%;
+                    background-repeat:no-repeat;
+                }
+                nav>a>i{
+                    margin:10px;
+                    padding:5px 8px;
+                }
+                .menuicon>i{
+                color:#f0f0f0; 
+                font-size:40px; 
+                -webkit-text-stroke-width: 3px; 
+                -webkit-text-stroke-color:#272727;
+                }
+                .menuicon>i:hover{
+                -webkit-text-stroke-color:#535353fb;
+                background-color:#535353fb;
+                transition:0.5s;
+                cursor:pointer;
+                }
+                .content{
+                    margin:0 35px;
+                }
+                .textcont{
+                    margin:50px 0 10px 0;
+                    padding:0 50px;
+                }
+                .textcont>h2{
+                    font-size:34px;
+                }
+                .textcont>h6{
+                    font-size:20px; 
+                }
+                .skillrow{
+                    margin:25px -50px;
+                }
+                .skillrow2{
+                    margin-top:-25px;
+                }
+                div.skillmescont{
+                    position: relative; margin: 0 25%; border-radius: 25px; background-color:#363636;
+                    box-shadow:8px 2px 15px 0 #030303; width:50%; min-width:150px;
+                }
+                div.skillmescont > img{
+                    position:absolute; left:-10px; top:-11px; width:60px; height:60px;
+                    border-radius:50%;  box-shadow: 6px 4px 30px 0 #000000;
+                }
+                div.skillmescont > div.widthfill{
+                    background-color:#ecececcb; height:35px; border-radius: 25px; padding:1.5% 0 0 18%; transition:1s; transition-delay:200m;
+                }
+                div.skillcol1r2 > .skillmescont > div.widthfill , div.skillcol2r2 > .skillmescont > div.widthfill{
+                    background-color:#ecececcb; height:35px; border-radius: 25px; padding:1.5% 0 0 18%; 
+                }
+                .projectsect{
+                    margin:0px -50px 0px -50px;
+                    padding:50px 0;
+                }
+                .skillsect{
+                    margin:0;
+                    padding:50px 0;
+                }
+           }
+        @media screen and (max-width: 600px){
+            h3{
+                font-size:28px;
+            }
+            .picsect>#pictabmob{
+                    max-width:60%;
+                    height:auto;
+            }
+            nav{
+                margin:0 0 100px 0;
+            }
+            .menuicon > i{
+                font-size:35px;
+            }
+            .content{
+                margin:0px 24px;
+            }
+    /*CHANGING PROJECT MARGINS*/
+           .projects{
+            margin:35px 70px 0px 70px;
+           }
+           nav>a{
+            margin:0 0 0 15px;
+           }
+    /*SIDE NAV */
+           #navbar{
+             width:50%;
+             margin-top:0px;
+           }
+           #navbar>a{
+               font-size:20px;
+               margin:12% 0 0 18.5%;
+               padding:8px 15px;
+           }  
+          #navbar > a#aboutnav{
+               margin-top:75px;
+           }
+           #navbar>div.icondiv>i{
+               font-size:32px;
+               -webkit-text-stroke-width: 5px;
+           } 
+    /*ABOUT TEXT*/  
+           .textcont{
+               padding:0 25px;
+           }   
+           .textcont>p{
+               font-size:16px;
+               font-family:Raleway;
+           } 
+           .textcont>h2{
+                    font-size:28px;
+            }
+            .textcont>h6{
+                 font-size:18px; 
+            }
+    /*SKILL .SECTION*/
+           div.skillmescont > div.widthfill{
+                    background-color:#ecececcb; height:35px; border-radius: 25px; padding:2% 0 0 18%; transition:1s; transition-delay:200m;
+           }
+            div.skillcol1r2 > .skillmescont > div.widthfill , div.skillcol2r2 > .skillmescont > div.widthfill{
+                    background-color:#ecececcb; height:35px; border-radius: 25px; padding:2% 0 0 18%; 
+           }
+           .contactbg{
+               left:-13vw;
+               position:relative;
+           }
+           .socialcol2 > a > i, .socialcol1 > a > i{
+               font-size:18px;
+               padding:13px 13px;
+           }
+
+        }
+        @media screen and (max-width: 395px){
+            #navbar>a{
+               font-size:18px;
+               margin:12% 0 0 18.5%;
+               padding:8px 15px;
+           }
+           div.skillmescont > img{
+                position:absolute; left:-10px; top:-8px; width:50px; height:50px;
+                border-radius:50%;  box-shadow: 6px 4px 30px 0 #000000;
+           }
+           .menuicon > i{
+                font-size:30px;
+           }
+           .projects{
+            margin:35px 50px 0px 50px;
+           }
+           /*CONTACT SECTION*/
+           .contactbg{
+               left:-13vw;
+               position:relative;
+               height:450px;
+           }
+           p#contacttext{
+               font-size:15px;
+           }
+           /*ABOUT TEXT*/
+           .textcont{
+               padding:0;
+               margin:25px 0 10px 0;
+           }
+           .textcont>h2{
+                    font-size:24px;
+            }
+            .textcont>h6{
+                 font-size:16px; 
+            }
+            .textcont>p{
+                font-size:16px;
+            }
+            /*gottotop buttn*/
+           div.gototop{
+               right:10px;
+           }
+
+        }
+        </style>
+    </head>
+    <body>
+        <div class="gototop" id="totop">        
+            <a href="#topnav"><i class="fa fa-angle-up"></i></a>
+        </div>
+        <!--NAVIGATION TOP BAR-->
+        <nav id="topnav">
+            <a class="w3-left w3-hide-large menuicon">
+                <i class="fa fa-bars" onclick="open_sidenav()"></i>
+            </a>
+            <!--LARGE SCREEN NAV-->
+            <div class="w3-hide-medium w3-hide-small" style="margin:0px 100px; text-align:center;">
+                <a class="navi" href="#topnav"  onclick="currentitem(this)" style="border:1.5px solid #72DDFF; padding: 10px 20px; border-radius:1px; color:#72DDFF;">About</a>
+                <a class="navi" href="#projects" onclick="currentitem(this)">Projects</a>
+                <a class="navi" href="#skillsection"  onclick="currentitem(this)">Skill Set</a>
+                <a class="navi" href="#contact"  onclick="currentitem(this)" style="margin:0px;">Contact</a>
+            </div>
+        
+            <!--SMALL AND MED SCREEN NAV-->
+            <div class="w3-top w3-bar-block w3-hide-large" id="navbar">
+                <div class="w3-right w3-padding icondiv"><i class="fa fa-times" onclick="close_sidenav()"></i>
+                   
+                </div>
+            
+                <a class="navismall w3-bar-item" href="#about" id="aboutnav" >About</a>
+                <a class="navismall w3-bar-item" href="#projects">Projects</a>
+                <a class="navismall w3-bar-item" href="#skillsection">Skill Set</a>
+                <a class="navismall w3-bar-item" href="#contact">Contact</a>
+
+            </div>
+        </nav>
+        <!--NAVIGATION ENDED-->
+
+        <!--MAIN CONTENT STARTS-->
+        <div class="content" >
+            <!--ABOUT SECTION-->
+                <!--COLUMNS-->
+            
+            <div class="w3-row aboutsect" id="about"  >
+                <div class="w3-col l6 picsect" style="text-align:center;">
+                    <img src="images/pic sec dark.webp" alt="Harleen Kaur profile picture" style="max-width:100%; height:auto" class="w3-hide-medium w3-hide-small">
+                    <img src="images/cute girl1.png" alt="Harleen Kaur profile picture" class="w3-hide-large" id="pictabmob">
+                </div>
+                <div class="w3-col l6 textcont">
+                    <h2>Harleen Kaur</h2>
+                    <!--having a website for your business becomes crucial when almost 90% of people go online to seek services-->
+                    <h6>Web Designer&nbsp&nbsp|&nbsp&nbspWebsite developer</h6>
+                    
+                    <p>Hey there, I'm Harleen. I'm a self taught website designer and developer. You can get responsive and seo friendly website built for your business. I'll make sure that all requirements are met and the final website is worth your time and money invested.</p>
+                    <p class="aboutdetails"><span><i class="fa fa-envelope"></i></span><a href="mailto:harleenkaur1343@gmail.com" target="_blank" style="text-decoration: none;">harleenkaur1343@gmail.com</a><br>
+                       <span><i class="fa fa-map-marker" style="padding-left:5px;"></i></span>Lives in Ludhiana, Punjab<br>
+                       <span><i class="fa fa-graduation-cap"></i></span>Pursuing BTech in Information Technology
+                    </p>
+                      
+
+                    
+                    <!--<br> Lives in Ludhiana, Punjab
+                    <br> <a href="mailto: harleenkaur1343@gmail.com" style="text-decoration: none;">harleenkaur1343@gmail.com</a>
+                    -->
+                    
+                </div>
+            </div>
+                <!--ABOUT SECTION ENDED-->
+                <!--PROJECTS SECTION-->
+            <div class="projectsect" id="projects">
+                <h3>Projects</h3>
+
+                <div class="projects w3-row" >
+                    <div class="w3-col l4" id="projimg" style="text-align:center;">
+                        <img src="images/wp main upd.webp" alt="Wordpress Website" style="max-width:100%; height:auto;">
+                        <br><br>
+                        <a href="https://wordpress360.epizy.com/wordpress-5-3-10-new-features-to-look-for/" target="_blank">Wordpress Blog Site</a>
+                    </div>
+                    <div class="w3-col l4" id="projimg">
+                        <img src="images/cakes n coffee.webp" alt="Cakes and coffee design" style="max-width:100%; height:auto; margin-top:-5px;">
+                        <br><br>
+                        <a href="https://www.figma.com/proto/YLZRbZj5nuiXcUCDeCQDo7/cakes-and-coffee?node-id=386%3A2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=55%3A2" target="_blank">Cakes and coffee web design</a>
+                    </div>
+                    <div class="w3-col l4" id="projimg">
+                        <img src="images/landingpage.webp" alt="Landing page design" style="max-width:100%; height:auto;">
+                        <br><br>
+                        <a href="https://www.figma.com/proto/0BatV82bvnpKHQOZU849jI/Cafe-landing-page?node-id=52%3A159&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A2" target="_blank">Cafe Landing Page</a>
+                    </div>
+                </div>
+
+            </div>
+            <!--PROJECT SECTION ENDED-->
+        
+            <!--SKILL SET SECTION-->
+            <div class="skillsect" id="skillsection">
+                <h3 style="text-align: center;">Skill Set</h3>
+
+                <!--SKILL BUTTONS START-->
+                <div class="w3-row skillrow">
+                    <div class="w3-col l4 m12 s12 skillcol1r1">
+                        <br>
+                        <div class="skillmescont">
+                            <img src="images/css icon 1.png" alt="css icon" class="w3-left" >
+                            <div style="width:0%;" id="cssicon" class="widthfill">85%</div>
+                        </div>            
+                        <br>
+                    
+                    </div>
+                    <div class="w3-col l4 m12 s12 skillcol2r1">
+                        <br>
+                        <div class="skillmescont">
+                            <img src="images/js icon 1.png" alt="js icon" class="w3-left">
+                            <div style="width:0%;" id="jsicon" class="widthfill">75%</div>
+                        </div>            
+                        <br>
+                    </div>
+                   <div class="w3-col l4 m12 s12 skillcol3r1">
+                    <br>
+                        <div class="skillmescont">
+                            <img src="images/html icon 1.png" alt="html icon" class="w3-left">
+                            <div  class="widthfill" id="htmlicon" style="width:0%;">95%</div>
+                        </div>            
+                    <br>
+                   </div>
+                </div>
+                <!--2ND ROW-->
+                <div class="w3-row skillrow skillrow2" style="text-align:center;">
+                    <div class="w3-col l6 m12 s12 skillcol1r2">
+                        <br>
+                        <div class="skillmescont">
+                            <img src="images/wp icon 1.png" alt="wordpress icon" class="w3-left">
+                            <div class="widthfill" id="wpicon" style="width:0%;">80%</div>
+                        </div>            
+                        <br>
+                    </div>
+
+                    <div class="w3-col l6 m12 s12 skillcol2r2">
+                        <br>
+                        <div class="skillmescont">
+                            <img src="images/figma icon 1.png" alt="figma icon" class="w3-left">
+                            <div  class="widthfill" id="figmaicon" style="width:0%;">85%</div>
+                        </div>            
+                        <br>
+                    </div>
+
+                </div>
+            </div>
+        <!--SKILL SET ENDS-->
+        <!--CONTACT SECTION BEGINS-->
+            <div style="margin:0 -100px;" id="contact">
+                <div class="contactbg" style="padding-top:90px; text-align:center;">
+                    <h3>Contact</h3>
+                    <center>
+                    <p id="contacttext"> For discussing any projects, you can send a mail or drop a message on Linkedin. Thanks for your time..</p>
+                    </center>
+                    <center>
+                    <div class="w3-row socialrow">
+                        <div class="w3-col l6 m6 s6 socialcol1" style="text-align:right;">
+                            <a href="mailto:harleenkaur1343@gmail.com?subject=HTML link" target="_blank"><i class="fa fa-envelope mail"><span class="tooltip1">harleenkaur1343@gmail.com</span></i></a>
+                        </div>
+                        <div class="w3-col l6 m6 s6 socialcol2" style="text-align:left;">
+                            <a href="https://www.linkedin.com/in/harleen-kaur-4b5b38194/" target="_blank"><i class="fa fa-linkedin-square linkin"></i></a> 
+                        </div>
+                    </div>
+                    </center>
+                <br><br>
+                </div>      
+            </div>
+        <!--CONTACT SECTION ENDS-->
+        <!--MAIN CONTENT ENDS-->  
+        </div>
+
+         
+    </body>
+    <script>
+        /*topnav changes onclick*/ 
+
+        /*border:1.5px solid #72DDFF; padding: 10px 20px; border-radius:1px; color:#72DDFF;*/
+        function currentitem(navitem)
+        {
+            var ele=document.getElementsByClassName('navi');
+            for(var i=0; i<ele.length; i++)
+                {
+                    ele[i].style.color="white";
+                    ele[i].style.textDecoration="none";
+                    ele[i].style.fontFamily="Quattrocento";
+                    ele[i].style.fontSize="1.8vw";
+                    ele[i].style.border="none";
+                }
+
+            ele[3].style.margin="0";
+
+            navitem.style.color="#72DDFF";
+            navitem.style.border="1px solid #72DDFF";
+            navitem.style.borderRadius="1px";
+
+        }
+        /*SIDENAVIGNATION*/
+        function open_sidenav(){
+            document.getElementById('navbar').style.width="50%";
+            document.getElementById('navbar').style.visibility="visible";
+            const collection=document.getElementById('navbar').children;
+            for(var i=1; i<collection.length; i++)
+            {
+                collection[i].style.display="block";
+            }
+        }
+        function close_sidenav(){
+            document.getElementById('navbar').style.width="0%";
+            const collection=document.getElementById("navbar").children;
+            for(var i=1; i<collection.length; i++)
+            {
+                collection[i].style.display="none";
+            }
+        }
+   
+// Create a MediaQueryList object
+     var tab = window.matchMedia("(max-width: 992px)");
+     var mob = window.matchMedia("(max-width: 450px)");
+     mobilescrn(mob)
+
+    function mobilescrn(x){
+            if(x.matches)
+            {
+                document.body.style.backgroundImage="url('images/web bgd mobs1.webp')";
+            }
+            else{
+                tablarge(tab);
+            }
+        }
+
+     function tablarge(e){
+       
+        if(e.matches)
+        {
+            document.body.style.backgroundImage="url('images/web bgd tablet.webp')";
+        }
+        else 
+        {
+            document.body.style.backgroundImage="url('images/bg.webp')";
+        }
+    }
+    tab.addEventListener('change', tablarge);
+    mob.addEventListener("change",mobilescrn);
+
+            /*SCROLL MEASUREMENT*/
+        let id = setInterval(scrlheight, 1000);
+
+    function scrlheight() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        console.log(scrolled);
+
+        if(scrolled>=60) 
+            {   inc_width();
+                clearInterval(id);
+            }
+        
+    function inc_width(){
+    document.getElementById('cssicon').style.width="85%";
+    document.getElementById('jsicon').style.width="75%";
+    document.getElementById('htmlicon').style.width="95%";
+    document.getElementById('wpicon').style.width="80%";
+    document.getElementById('figmaicon').style.width="85%";
+    
+    }
+}
+    let goto=setInterval(gototopbtn, 1000);
+   
+   
+    function gototopbtn(){
+        var windScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var heights = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var gotoscroll = (windScroll / heights) * 100;
+
+        if(gotoscroll>=25)
+            {
+                 document.getElementById('totop').style.display="inline-block";
+            }
+        else{
+                document.getElementById('totop').style.display="none";
+            }
+    }
+
+    </script>
+</html>
