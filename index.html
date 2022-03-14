@@ -60,7 +60,7 @@
                 padding:25px 0px 0 0;
             }
             h3{
-                background-image: linear-gradient(#FFC9CC, #ec4da2);
+                background-image: linear-gradient(#FFC9CC, #f369b3);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -122,11 +122,10 @@
                 padding: 1vw 2vw;
                 display:none;
             }
-           #navbar>a:hover, a:active{
+           #navbar>a:hover{
                background-color: #4b4b4bb6;
                border-radius:40px;
                color:#a1ecff;
-               box-shadow:0 8px 15px 0 solid #000000;
            }
            #navbar > a#aboutnav{
                margin-top:100px;
@@ -225,17 +224,17 @@
            div.skillcol1r2 > .skillmescont > div.widthfill , div.skillcol2r2 > .skillmescont > div.widthfill{
             background-color:#ecececcb; height:40px; border-radius: 25px; padding:2% 0 0 18%;
            }
-            div#contact{
-                style="margin:0 -100px;"
-            }
+           div#contact{
+               margin:0 -100px;
+           }
            .contactbg{
                background-color:#c4c4c415;
                border-radius:8000% 8000% 0 0 ;
                position:relative;
-               left:-10vw;
+               left:0vw;
                height:400px;
                min-height:250px;
-               width:130%;
+               width:100%;
                min-width:100%;
                box-shadow: 0 8px 2px 0 #00000075;
            }
@@ -295,7 +294,7 @@
                padding:10px 15px;
                background-color: #dddddd;
                border-radius:4px;
-               width:250px;
+               width:240px;
                text-align:left;
                font-size:16px;
                font-family:Raleway;
@@ -309,7 +308,6 @@
                opacity: 0;
                transition: opacity 1s;
            }
-           
            /*MEDIA QUERIES*/
            @media screen and (max-width: 992px){
                 #projimg>a{
@@ -360,12 +358,8 @@
                     margin:25px -35px;
                 }
                 .skillrow2{
-                    margin:-25px 0 0 0;
+                    margin-top:-25px;
                 }
-               .skillrow>.skillcol1r1,.skillrow>.skillcol2r1,.skillrow>.skillcol3r1{
-                    margin:0;
-                   border:1px solid coral;
-               }
                 div.skillmescont{
                     position: relative; margin: 0 25%; border-radius: 25px; background-color:#363636;
                     box-shadow:8px 2px 15px 0 #030303; width:50%; min-width:150px;
@@ -380,21 +374,21 @@
                 div.skillcol1r2 > .skillmescont > div.widthfill , div.skillcol2r2 > .skillmescont > div.widthfill{
                     background-color:#ecececcb; height:35px; border-radius: 25px; padding:1.5% 0 0 18%; 
                 }
-               .skillsect{
-                     margin:0px -35px;
-                     padding:90px 0 ;
-                }
                 .projectsect{
                     margin:0px -35px;
                     padding:50px 0;
                 }
-                div#contact{
-                style="margin:0 -35px;"
+                .skillsect{
+                    margin:0;
+                    padding:70px 0;
                 }
-               .contactbg{
-                   width:120%;
-                   left:-11vw;
-               }
+                div#contact{
+                    margin:0 -35px;
+                }
+                .contactbg{
+                    border-radius:50% 50% 0 0;
+                    height:430px;
+                }
            }
         @media screen and (max-width: 600px){
             h3{
@@ -413,12 +407,12 @@
             .content{
                 margin:0px 25px;
             }
-            div#contact{
-                style="margin:0 -25px;"
-            }
     /*CHANGING PROJECT MARGINS*/
            .projects{
             margin:35px 70px 0px 70px;
+           }
+           .projectsect{
+               margin:0 -25px;
            }
            nav>a{
             margin:0 0 0 15px;
@@ -455,68 +449,105 @@
                  font-size:18px; 
             }
     /*SKILL .SECTION*/
-            .skillrow{
-            margin:25px -25px;
-            }
            div.skillmescont > div.widthfill{
-                    background-color:#ecececcb; height:35px; border-radius: 25px; padding:2% 0 0 18%; transition:1s; transition-delay:200m;
+                    background-color:#ecececcb; height:35px; border-radius: 25px; padding:2% 0 0 18%; transition:1s; transition-delay:200m; font-size:14px;
            }
-            div.skillcol1r2 > .skillmescont > div.widthfill , div.skillcol2r2 > .skillmescont > div.widthfill{
+           div.skillcol1r2 > .skillmescont > div.widthfill , div.skillcol2r2 > .skillmescont > div.widthfill{
                     background-color:#ecececcb; height:35px; border-radius: 25px; padding:2% 0 0 18%; 
            }
-           .contactbg{
-               left:-13vw;
-               position:relative;
+           /*.contactbg{
+            border-radius: 50% 50% 0 0;
+           }*/
+           div#contact{
+               margin:0 -25px;
+               padding:70px 0 0 0;
+               background-color: #c4c4c415;
+           }
+           p#contacttext{
+               font-size:15px;
            }
            .socialcol2 > a > i, .socialcol1 > a > i{
                font-size:18px;
                padding:13px 13px;
            }
-
+           .skillrow{
+               margin:25px -25px;
+           }
+           .skillrow2{
+               margin-top:-25px;
+           }
         }
         @media screen and (max-width: 395px){
+            /*Project links*/
+            #projimg>a
+            /*Side nav*/
             #navbar>a{
                font-size:18px;
                margin:12% 0 0 18.5%;
                padding:8px 15px;
            }
-           div.skillmescont > img{
+            div.skillmescont > img{
                 position:absolute; left:-10px; top:-8px; width:50px; height:50px;
                 border-radius:50%;  box-shadow: 6px 4px 30px 0 #000000;
            }
-           .menuicon > i{
+            div.skillmescont > div.widthfill, div.skillcol1r2 > .skillmescont > div.widthfill , div.skillcol2r2 > .skillmescont > div.widthfill{
+               padding:3% 0 0 18%;
+           }
+            .menuicon > i{
                 font-size:30px;
            }
-           .projects{
+            .projects{
             margin:35px 50px 0px 50px;
            }
+           #projimg>a{
+               font-size:16px; 
+           }
            /*CONTACT SECTION*/
-           .contactbg{
+            .contactbg{
                left:-13vw;
                position:relative;
                height:450px;
-              
            }
-           p#contacttext{
+             p#contacttext{
                font-size:15px;
            }
+            .socialcol2 > a > i, .socialcol1 > a > i{
+            font-size:15px;
+            padding: 9px 10px; 
+           }
+
+           /*tooltip email*/
+            .tooltip1, .tooltip2{
+               font-size:14px;
+              width:210px;
+           }
            /*ABOUT TEXT*/
-           .textcont{
+            .textcont{
                padding:0;
                margin:25px 0 10px 0;
            }
-           .textcont>h2{
+            .textcont>h2{
                     font-size:24px;
             }
             .textcont>h6{
                  font-size:16px; 
             }
             .textcont>p{
+                font-size:15px;
+            }
+            .textcont>p.aboutdetails{
+                font-size:14px;
+                text-align:left;
+            }
+            .textcont>p.aboutdetails>span>i{
                 font-size:16px;
+                width:35px;
             }
             /*gottotop buttn*/
-           div.gototop{
-               right:10px;
+            div.gototop>a>i{
+               right:12px;
+               font-size:20px;
+               padding:3px 8px 6px 8px;
            }
 
         }
@@ -569,7 +600,7 @@
                     <!--having a website for your business becomes crucial when almost 90% of people go online to seek services-->
                     <h6>Web Designer&nbsp&nbsp|&nbsp&nbspWebsite developer</h6>
                     
-                    <p>Hey there, I'm Harleen. I'm a self taught website designer and developer. You can get responsive and seo friendly website built for your business. I'll make sure that all requirements are met and the final website is worth your time and money invested.</p>
+                    <p>Hey there, I'm Harleen. I'm a self taught website designer and developer. You can get responsive and SEO friendly website built for your business. I'll make sure that all requirements are met and the your website is worth your time and money invested.</p>
                     <p class="aboutdetails"><span><i class="fa fa-envelope"></i></span><a href="mailto:harleenkaur1343@gmail.com" target="_blank" style="text-decoration: none;">harleenkaur1343@gmail.com</a><br>
                        <span><i class="fa fa-map-marker" style="padding-left:5px;"></i></span>Lives in Ludhiana, Punjab<br>
                        <span><i class="fa fa-graduation-cap"></i></span>Pursuing BTech in Information Technology
@@ -666,12 +697,12 @@
         <!--SKILL SET ENDS-->
         <!--CONTACT SECTION BEGINS-->
             <div id="contact">
-                <div class="contactbg" style="padding-top:90px; text-align:center;">
+                <div class="w3-hide-small contactbg" style="padding-top:90px; text-align:center;">    
                     <h3>Contact</h3>
-                    <center>
+                <center>
                     <p id="contacttext"> For discussing any projects, you can send a mail or drop a message on Linkedin. Thanks for your time..</p>
-                    </center>
-                    <center>
+                </center>
+                <center>
                     <div class="w3-row socialrow">
                         <div class="w3-col l6 m6 s6 socialcol1" style="text-align:right;">
                             <a href="mailto:harleenkaur1343@gmail.com?subject=HTML link" target="_blank"><i class="fa fa-envelope mail"><span class="tooltip1">harleenkaur1343@gmail.com</span></i></a>
@@ -680,9 +711,26 @@
                             <a href="https://www.linkedin.com/in/harleen-kaur-4b5b38194/" target="_blank"><i class="fa fa-linkedin-square linkin"></i></a> 
                         </div>
                     </div>
-                    </center>
-                <br><br>
-                </div>      
+                </center>
+                    <br><br>  
+                </div>              
+                <div class="w3-hide-large w3-hide-medium contactinfosmall">
+                    <h3>Contact</h3>
+                <center>
+                    <p id="contacttext"> For discussing any projects, you can send a mail or drop a message on Linkedin. Thanks for your time..</p>
+                </center>
+                <center>
+                    <div class="w3-row socialrow">
+                        <div class="w3-col l6 m6 s6 socialcol1" style="text-align:right;">
+                            <a href="mailto:harleenkaur1343@gmail.com?subject=HTML link" target="_blank"><i class="fa fa-envelope mail"><span class="tooltip1">harleenkaur1343@gmail.com</span></i></a>
+                        </div>
+                        <div class="w3-col l6 m6 s6 socialcol2" style="text-align:left;">
+                            <a href="https://www.linkedin.com/in/harleen-kaur-4b5b38194/" target="_blank"><i class="fa fa-linkedin-square linkin"></i></a> 
+                        </div>
+                    </div>
+                </center>
+                    <br><br> 
+                </div>
             </div>
         <!--CONTACT SECTION ENDS-->
         <!--MAIN CONTENT ENDS-->  
